@@ -1,13 +1,23 @@
 <template>
 
   <div class="ui container">
+
+    <nav class="ui inverted menu">
+      <header class="header item"><a href="/"> Donation </a></header>
+      <div class="right menu">
+        <div show.bind="loggedIn">
+          <a id="logout" class= "item" click.trigger="logout()"> Logout</a>
+        </div>
+      </div>
+    </nav>
+
     <section class="ui four column stackable grid basic segment">
-      <div class="ui row">
+      <div show.bind="!loggedIn" class="ui row">
         <section class="ui five wide column">
           <compose view="./viewmodels/login.html"></compose>
         </section>
       </div>
-      <div class="ui row">
+      <div show.bind="loggedIn" class="ui row">
         <article class="column">
           <compose view-model="./viewmodels/candidate"></compose>
         </article>
@@ -23,5 +33,6 @@
       </div>
     </section>
   </div>
+
 
 </template>
