@@ -94,6 +94,9 @@
           "node_modules/requirejs/require.js"
         ],
         "dependencies": [
+          "aurelia-history-browser",
+          "aurelia-http-client",
+          "aurelia-loader",
           "aurelia-binding",
           "aurelia-bootstrapper",
           "aurelia-dependency-injection",
